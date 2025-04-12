@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
 import { ContainerFilho, DivContainer, DivImagem, DivInfo, DivLink, Paragrafo, Titulo } from './styles'
 import axios from 'axios'
+import gitIcon from '../../assets/git.png'
+import intiIcon from '../../assets/intinuição.png'
+import segIcon from '../../assets/seguidores.png'
+import linkIcon from '../../assets/link.png'
 
 interface UsuarioGitHub {
   avatar_url?: string
@@ -18,6 +22,7 @@ export function Perfil() {
 
   return (
     <DivContainer>
+
       <DivImagem>
         <img src={usuarioInfo?.avatar_url} />
       </DivImagem>
@@ -25,18 +30,20 @@ export function Perfil() {
       <ContainerFilho>
         <DivInfo>
           <div>
-            <Titulo>{usuarioInfo?.name}</Titulo>
-            <p>Github</p>
+            <Titulo>Elias de souza <a href="#"><p>GITHUB  <img src={linkIcon} alt='Link para o Guithub' /> </p></a> </Titulo>
+
           </div>
-          <Paragrafo>Lor llitia Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate modi fugiat? Similique, quas veritatis! Adipisci nulla tempora velit quaerat voluptatum fuga beatae, veniam eaque. Explicabo quibusdam dolor consequatur facere. incidunt n ores.</Paragrafo>
+          <Paragrafo>Lor llitia Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate modi fugiat? Simil incidunt n ores.</Paragrafo>
         </DivInfo>
 
         <DivLink>
-          <span>git</span>
-          <span>rocketseat</span>
-          <span>seguidores</span>
+          <span><img src={gitIcon} alt="nome" />Nome</span>
+          <span><img src={intiIcon} alt="intituição" />Rocketseat</span>
+          <span><img src={segIcon} alt="seguidores" />Seguidores</span>
+
         </DivLink>
       </ContainerFilho>
+
     </DivContainer>
   )
 }
