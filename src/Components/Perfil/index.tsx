@@ -22,28 +22,22 @@ export function Perfil() {
 
   return (
     <DivContainer>
-
       <DivImagem>
         <img src={usuarioInfo?.avatar_url} />
       </DivImagem>
-
       <ContainerFilho>
         <DivInfo>
           <div>
             <Titulo>Elias de souza <a href="#"><p>GITHUB  <img src={linkIcon} alt='Link para o Guithub' /> </p></a> </Titulo>
-
           </div>
           <Paragrafo>Lor llitia Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate modi fugiat? Simil incidunt n ores.</Paragrafo>
         </DivInfo>
-
         <DivLink>
           <span><img src={gitIcon} alt="nome" />Nome</span>
           <span><img src={intiIcon} alt="intituição" />Rocketseat</span>
           <span><img src={segIcon} alt="seguidores" />Seguidores</span>
-
         </DivLink>
       </ContainerFilho>
-
     </DivContainer>
   )
 }

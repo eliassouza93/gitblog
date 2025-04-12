@@ -40,8 +40,6 @@ export const ContainerFilho = styled.div`
    flex-direction: column;
    color: #AFC2D4;
    
-
-
 `
 
 export const DivInfo = styled.div`
@@ -62,7 +60,6 @@ export const DivInfo = styled.div`
     height: 18px;
   }
    
-
 `
 
 export const Titulo = styled.h2`
@@ -85,7 +82,6 @@ export const Paragrafo = styled.p`
    word-break: break-word;
    overflow-wrap: break-word;
   
-
 `
 export const DivLink = styled.p`
     width: 70%;
@@ -101,6 +97,5 @@ export const DivLink = styled.p`
       width: 18px;
       height:18px;
     }
-
 
 `
