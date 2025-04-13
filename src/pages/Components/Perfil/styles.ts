@@ -45,14 +45,11 @@ export const DivInfo = styled.div`
    display: flex;
    flex-direction: column;
    gap: 1rem;
-   height: 130px;
+   height: 110px;
    font-family: "Nunito", sans-serif;
-  div {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
+ 
+
+ 
   img{
     width: 18px;
     height: 18px;
@@ -65,6 +62,9 @@ export const Titulo = styled.h2`
     justify-content: space-between;
     width: 95%;
     color: #E7EDF4;
+    padding: 0;
+    margin: 0;
+  
     p{
       font-size: 15px;
       color: #3294F8;
@@ -75,11 +75,8 @@ export const Titulo = styled.h2`
 
 `
 export const Paragrafo = styled.p`
- 
-   line-height: 1.6;
-   word-break: break-word;
-   overflow-wrap: break-word;
-  
+    margin-top: -10px;
+   
 `
 export const DivLink = styled.p`
     width: 75%;

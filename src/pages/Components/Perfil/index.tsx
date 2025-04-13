@@ -35,9 +35,8 @@ export function Perfil() {
       </DivImagem>
       <ContainerFilho>
         <DivInfo>
-          <div>
-            <Titulo>{usuarioInfo.name} <a href="https://github.com/eliassouza93" target="_blank" ><p>GITHUB  <img src={linkIcon} alt='Link para o Guithub' /> </p></a> </Titulo>
-          </div>
+          <Titulo>{usuarioInfo.name} <a href="https://github.com/eliassouza93" target="_blank" ><p>GITHUB  <img src={linkIcon} alt='Link para o Guithub' /> </p></a> </Titulo>
+
           <Paragrafo> {usuarioInfo.bio} </Paragrafo>
         </DivInfo>
         <DivLink>
