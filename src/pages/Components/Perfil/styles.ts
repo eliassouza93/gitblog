@@ -82,7 +82,7 @@ export const Paragrafo = styled.p`
   
 `
 export const DivLink = styled.p`
-    width: 70%;
+    width: 75%;
     display: flex;
     gap: 1;
     height: 20px;
@@ -91,7 +91,7 @@ export const DivLink = styled.p`
  
 
     img{
-      margin-right: 10px;
+      margin-right: 12px;
       width: 18px;
       height:18px;
     }
