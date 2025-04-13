@@ -24,8 +24,6 @@ export const DivImagem = styled.div`
   align-items: center;
   justify-content: center;
 
-  
-
   img {
     width: 148px;
     height: 148px;
