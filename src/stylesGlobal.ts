@@ -11,7 +11,7 @@ export const StyledGlobal = createGlobalStyle`
         font-family: "Nunito", sans-serif;
        }body{
         background-color: #071422;
-        height: 100vh;
+     
        }
 
 
