@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 export const FormularioContainer = styled.div`
     margin-top: 200px;
- 
+    width: 864px;
+    
     input{
         width: 864px;
         height: 50px;
@@ -28,7 +29,6 @@ export const Container = styled.div`
 export const Titulo = styled.h5`
    font-size: 18px;
  
-
 `
 export const Spam = styled.p`
     font-size: 14px;

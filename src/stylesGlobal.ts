@@ -9,9 +9,10 @@ export const StyledGlobal = createGlobalStyle`
         box-sizing: border-box;
         font-family: sans-serif;
         font-family: "Nunito", sans-serif;
+      
        }body{
         background-color: #071422;
-     
+        height: 100vh;
        }
 
 

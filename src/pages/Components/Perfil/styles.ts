@@ -14,10 +14,7 @@ export const DivContainer = styled.div`
   display: flex;
   align-items: center;
   height: 212px;
-
-  
 `
-
 export const DivImagem = styled.div`
   width: 25%;
   display: flex;
@@ -28,16 +25,13 @@ export const DivImagem = styled.div`
     width: 148px;
     height: 148px;
     object-fit: cover;
-
   }
-
 `
 export const ContainerFilho = styled.div`
    width: 75%;
    display: flex;
    flex-direction: column;
    color: #AFC2D4;
-   
 `
 
 export const DivInfo = styled.div`
@@ -47,9 +41,7 @@ export const DivInfo = styled.div`
    gap: 1rem;
    height: 110px;
    font-family: "Nunito", sans-serif;
- 
 
- 
   img{
     width: 18px;
     height: 18px;
@@ -84,9 +76,7 @@ export const DivLink = styled.p`
     gap: 1;
     height: 20px;
     justify-content: space-between;
-
- 
-
+    
     img{
       margin-right: 12px;
       width: 18px;

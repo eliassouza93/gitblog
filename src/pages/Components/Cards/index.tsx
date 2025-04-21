@@ -1,32 +1,38 @@
-import { DivContainer, ContainerParagrafo, DivPost, Paragrafo, PostInterno, Titulo, TituloPai } from "./styles";
+import { DivContainer, ContainerParagrafo, DivPost, Paragrafo, PostInterno, Titulo, TituloPai } from "./styles"
 
+type CommentType = {
+  id: number
+  body: string
+  created_at: string
+  user: {
+    login: string
+    avatar_url: string
+    html_url: string
+  }
+}
 
+type CardsProps = {
+  posts: CommentType[]
+}
 
-export function Cards() {
-    return (
-        <DivContainer>
-
-            <DivPost>
-                <PostInterno>
-                    <TituloPai>
-                        <Titulo>Javascript e nodejs <span>Há 1 dia</span> </Titulo>
-                    </TituloPai>
-                    <ContainerParagrafo>
-                        <Paragrafo> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquid repellat, ducimus debitis, nisi quidem et, illo aut quod hic officiis non saepe! Voluptates </Paragrafo>
-                    </ContainerParagrafo>
-                </PostInterno>
-            </DivPost>
-            <DivPost>
-                <PostInterno>
-                    <TituloPai>
-                        <Titulo>Javascript  e Typescript <span>Há 1 dia</span> </Titulo>
-                    </TituloPai>
-                    <ContainerParagrafo>
-                        <Paragrafo> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquid repellat, ducimus debitis, nisi quidem et, illo aut quod hic officiis non saepe! Voluptates </Paragrafo>
-                    </ContainerParagrafo>
-                </PostInterno>
-            </DivPost>
-           
-        </DivContainer>
-    )
+export function Cards({ posts }: CardsProps) {
+  return (
+    <DivContainer>
+      {posts.length > 0 ? posts.map((post) => (
+        <DivPost key={post.id}>
+          <PostInterno>
+            <TituloPai>
+              <Titulo>
+                {post.user.login}
+                <span>{new Date(post.created_at).toLocaleDateString()}</span>
+              </Titulo>
+            </TituloPai>
+            <ContainerParagrafo>
+              <Paragrafo>{post.body}</Paragrafo>
+            </ContainerParagrafo>
+          </PostInterno>
+        </DivPost>
+      )) : <h3>Nenhum post encontrado</h3>}
+    </DivContainer>
+  )
 }
