@@ -15,6 +15,22 @@ type CardsProps = {
   posts: CommentType[]
 }
 
+const calculateDays = (createdAt: string): string => {
+    const createdDate = new Date(createdAt)
+    const day = new Date()
+    const timeDif = day.getTime() - createdDate.getTime()
+    const dayDif = Math.floor(timeDif / (1000 * 3600 * 24))
+  
+    if (dayDif === 0) {
+      return 'Hoje'
+    } else if (dayDif === 1) {
+      return '1 dia'
+    } else {
+      return `${dayDif} dias`
+    }
+  }
+  
+
 export function Cards({ posts }: CardsProps) {
   return (
     <DivContainer>
@@ -24,7 +40,7 @@ export function Cards({ posts }: CardsProps) {
             <TituloPai>
               <Titulo>
                 {post.user.login}
-                <span>{new Date(post.created_at).toLocaleDateString()}</span>
+                <span>{calculateDays(post.created_at)}</span>
               </Titulo>
             </TituloPai>
             <ContainerParagrafo>
