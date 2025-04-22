@@ -23,6 +23,7 @@ export const DivPost = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #E7EDF4;
  
  
 `

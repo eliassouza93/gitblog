@@ -30,7 +30,6 @@ const calculateDays = (createdAt: string): string => {
     }
   }
   
-
 export function Cards({ posts }: CardsProps) {
   return (
     <DivContainer>
