@@ -14,6 +14,15 @@ export const DivContainer = styled.div`
   display: flex;
   align-items: center;
   height: 212px;
+
+  @media (max-width: 768px) {
+    margin-top: -220px;
+    position: relative;
+    font-size: 10px;
+    
+  }
+
+
 `
 export const DivImagem = styled.div`
   width: 25%;
@@ -25,6 +34,13 @@ export const DivImagem = styled.div`
     width: 148px;
     height: 148px;
     object-fit: cover;
+
+    @media (max-width: 768px) {
+    margin-left: 10px;
+    width: 90%;
+    height: 90%;
+    
+  }
   }
 `
 export const ContainerFilho = styled.div`
@@ -32,6 +48,11 @@ export const ContainerFilho = styled.div`
    display: flex;
    flex-direction: column;
    color: #AFC2D4;
+
+   @media (max-width: 768px) {
+    margin: 20px;
+    
+  }
 `
 
 export const DivInfo = styled.div`
@@ -76,6 +97,14 @@ export const DivLink = styled.p`
     gap: 1;
     height: 20px;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+    width: 80%;
+    display: flex;
+    font-size: 9px;
+
+    
+  }
     
     img{
       margin-right: 12px;
