@@ -1,21 +1,21 @@
 import { Container, FormularioContainer, Spam, Titulo } from "./styles"
 
 type Typed = {
-  getDate: (valor: string) => void
+  getiltered: (valor: string) => void
+  total: number
 }
 
-
-export function Formulario({ getDate }: Typed) {
+export function Formulario({ getiltered, total }: Typed) {
   return (
     <FormularioContainer>
       <Container>
-        <Titulo> </Titulo>
-        <Spam>6 publicações</Spam>
+        <Titulo>Publicações</Titulo>
+        <Spam>{total} {total === 1 ? 'publicação' : 'publicações'}</Spam>
       </Container>
       <input
         type="text"
         placeholder="Buscar conteúdo"
-        onChange={(e) => getDate(e.target.value)}
+        onChange={(e) => getiltered(e.target.value)}
       />
     </FormularioContainer>
   )

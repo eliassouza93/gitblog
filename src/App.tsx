@@ -1,8 +1,9 @@
-import { Home } from "./pages/Home"
+import { Post } from "./pages/Components/Post"
+
 
 function App() {
   return (
-      <Home />
+     <Post/>
   )
 }
 export default App

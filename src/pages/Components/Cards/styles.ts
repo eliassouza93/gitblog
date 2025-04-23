@@ -50,17 +50,30 @@ export const TituloPai = styled.div`
 
 export const Titulo = styled.h3`
   display: flex;
+ 
   justify-content: space-between;
 
   span {
     font-size: 10px;
+    margin-left: 40px;
+    width: 40px;
+
   }
 `
 
 export const ContainerParagrafo = styled.div`
   height: 112px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 
 export const Paragrafo = styled.p`
   font-size: 14px;
+  color: #E7EDF4;
+  line-height: 1.4;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `
