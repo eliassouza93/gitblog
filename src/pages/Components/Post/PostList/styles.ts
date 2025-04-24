@@ -24,3 +24,20 @@ export const DivContainer = styled.div`
 
 
 `
+export const ContainerTitulo = styled.div`
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+
+`
+export const Container = styled.div`
+  margin: 15px;
+  height: 100px;
+
+`
+export const ContainerInformacoes = styled.div`
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+
+`
