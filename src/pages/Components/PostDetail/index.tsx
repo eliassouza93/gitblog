@@ -1,16 +1,19 @@
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import cover from '../../../assets/Cover.png'
+import tempo from '../../../assets/tempo.png'
+import comentario from '../../../assets/coments.png'
+import git from '../../../assets/git.png'
 import axios from 'axios'
 import { calculateDays } from '../../../utils/calculateDays'
 import { IssueType } from '../../IssueType'
-import { ContainerHome, ContainerOne,ContainerPost, ContainerPostFilho, HeaderContainer,CarregandoDIv,NavigationContainer } from './styles'
+import { ContainerHome, ContainerOne, ContainerPost, ContainerPostFilho, HeaderContainer, CarregandoDIv, NavigationContainer, Div1, Div2, ContainerInfoPerfil, ContainerBotton } from './styles'
+import gitLink from '../../../assets/link.png'
 
 export function PostDetail() {
   const { id } = useParams<{ id: string }>()
   const [post, setPost] = useState<IssueType | null>(null)
   const [loading, setLoading] = useState(true)
-
 
   useEffect(() => {
     const fetchPostDetails = async () => {
@@ -42,33 +45,42 @@ export function PostDetail() {
   if (!post) {
     return <div>Post não encontrado.</div>
   }
-
   return (
     <>
       <HeaderContainer>
-        <img src={cover} alt="cover" />
+        <img src={cover}/>
         <ContainerOne>
           <ContainerHome style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            <NavigationContainer> 
-              <Link to="/">
-              <span>&lt;</span> VOLTAR
-              </Link>
-              <a href={post.user.html_url} target="_blank" rel="noopener noreferrer">
-                VER NO GITHUB
-              </a>
+            <NavigationContainer>
+              <Div1>
+                <Link to="/">
+                  <span>&lt;</span> VOLTAR
+                </Link>
+              </Div1>
+              <Div2>
+                <a href={post.user.html_url} target="_blank" rel="noopener noreferrer">
+                  VER NO GITHUB
+                  <img src={gitLink} />
+                </a>
+              </Div2>
             </NavigationContainer>
-           
-            <div>
-              <span>{post.user.login}</span>
-              <span>{calculateDays(post.created_at)}</span>
-            </div>
+            <ContainerInfoPerfil>
+              <div style={{ display: 'flex', gap: '1rem' }}>
+                <h3>{post.title}</h3>
+              </div>
+              <ContainerBotton>
+                <div>
+                  <span> <img src={git}/> {post.user.login}</span>
+                  <span> <img src={tempo}/> Há {calculateDays(post.created_at)}</span>
+                  <span> <img src={comentario}/> {post.comments} comentários</span>
+                </div>
+              </ContainerBotton>
+            </ContainerInfoPerfil>
           </ContainerHome>
         </ContainerOne>
       </HeaderContainer>
-
       <ContainerPost>
         <ContainerPostFilho>
-        <h3>{post.title}</h3>
           {post.body.split('\n').map((line, index) => (
             <p key={index}>{line}</p>
           ))}

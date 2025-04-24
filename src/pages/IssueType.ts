@@ -1,4 +1,5 @@
 export type IssueType = {
+    comments: ReactNode;
     id: number;
     number: number;
     title: string;
