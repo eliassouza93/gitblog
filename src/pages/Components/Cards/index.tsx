@@ -1,19 +1,10 @@
+import { IssueType } from "../../IssueType";
 import { DivContainer, ContainerParagrafo, DivPost, Paragrafo, PostInterno, Titulo, TituloPai } from "./styles"
 
-type IssueType = {
-  id: number
-  title: string
-  body: string
-  created_at: string
-  user: {
-    login: string
-    avatar_url: string
-    html_url: string
-  };
-};
+import { useNavigate } from "react-router-dom"
 
 type CardsProps = {
-  filtered: IssueType[];
+  filtered: IssueType[]
 };
 
 const calculateDays = (createdAt: string): string => {
@@ -24,16 +15,26 @@ const calculateDays = (createdAt: string): string => {
 
   if (dayDiff === 0) return 'Hoje'
   if (dayDiff === 1) return '1 dia'
-  return `${dayDiff} dias`
+  return `${dayDiff} dias`;
 };
 
 export function Cards({ filtered }: CardsProps) {
+  const navigate = useNavigate();
+
   if (!filtered || filtered.length === 0) return <h3>Nenhuma issue encontrada.</h3>;
+
+  const handleCardClick = (number: number) => {
+    navigate(`/post/${number}`);
+  };
 
   return (
     <DivContainer>
       {filtered.map((issue) => (
-        <DivPost key={issue.id}>
+       <DivPost
+       key={issue.id} 
+       onClick={() => handleCardClick(issue.number)}
+       style={{ cursor: 'pointer' }}
+     >
           <PostInterno>
             <TituloPai>
               <Titulo>

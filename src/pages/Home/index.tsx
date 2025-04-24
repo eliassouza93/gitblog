@@ -16,7 +16,7 @@ type IssueType = {
     html_url: string
   };
 };
-
+ 
 export function Home() {
   const [issues, setIssues] = useState<IssueType[]>([])
   const [loading, setLoading] = useState<boolean>(true)
@@ -58,7 +58,7 @@ export function Home() {
       <Header />
       <Formulario getiltered={handleSearch} total={filteredIssues.length} />
       {loading && <p>Carregando post...</p>}
-      <Cards filtered={filteredIssues} />
+      <Cards filtered={issues} />
     </Containerhome>
   );
 }
