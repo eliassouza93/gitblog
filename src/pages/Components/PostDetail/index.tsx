@@ -1,21 +1,10 @@
 import  { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-
 import cover from '../../../assets/Cover.png'
 import axios from 'axios'
-
 import { calculateDays } from '../../../utils/calculateDays'
 import { IssueType } from '../../IssueType'
-import styled from 'styled-components'
-import { ContainerHome, ContainerOne,ContainerPost, ContainerPostFilho, HeaderContainer,CarregandoDIv } from './styles'
-
-
-const NavigationContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-  margin-bottom: 0.5rem; 
-`
+import { ContainerHome, ContainerOne,ContainerPost, ContainerPostFilho, HeaderContainer,CarregandoDIv,NavigationContainer } from './styles'
 
 export function PostDetail() {
   const { id } = useParams<{ id: string }>()
@@ -29,8 +18,6 @@ export function PostDetail() {
       const repo = "gitblog"
 
       setLoading(true)
-
-
       try {
         const { data } = await axios.get<IssueType>(
           `https://api.github.com/repos/${owner}/${repo}/issues/${id}`

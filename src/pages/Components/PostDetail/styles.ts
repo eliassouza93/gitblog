@@ -74,3 +74,10 @@ export const CarregandoDIv = styled.div`
   font-size: 14px;
 
 `
+export const NavigationContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-bottom: 0.5rem; 
+`
+
