@@ -22,7 +22,6 @@ export const DivContainer = styled.div`
     
   }
 
-
 `
 export const DivImagem = styled.div`
   width: 25%;

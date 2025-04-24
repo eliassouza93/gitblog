@@ -1,63 +1,63 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import  { useEffect, useState } from 'react'
+import { useParams, Link } from 'react-router-dom'
 
-import cover from '../assets/Cover.png';
-import axios from 'axios';
+import cover from '../../assets/Cover.png'
+import axios from 'axios'
 
-import { calculateDays } from '../utils/calculateDays';
-import { IssueType } from './IssueType';
-import styled from 'styled-components'; // Import styled-components aqui
-import { ContainerHome, ContainerOne,ContainerPost, ContainerPostFilho, HeaderContainer } from './styles';
+import { calculateDays } from '../../utils/calculateDays'
+import { IssueType } from '../IssueType'
+import styled from 'styled-components'
+import { ContainerHome, ContainerOne,ContainerPost, ContainerPostFilho, HeaderContainer } from './styles'
 
-// Crie um novo styled component para envolver os links
+
 const NavigationContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Opcional: para alinhar verticalmente se necessário */
-  margin-bottom: 0.5rem; /* Adiciona um pouco de espaço abaixo dos links */
-`;
+  align-items: center; 
+  margin-bottom: 0.5rem; 
+`
 
 export function PostDetail() {
-  const { id } = useParams<{ id: string }>();
-  const [post, setPost] = useState<IssueType | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { id } = useParams<{ id: string }>()
+  const [post, setPost] = useState<IssueType | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const fetchPostDetails = async () => {
-      const owner = "eliassouza93";
-      const repo = "gitblog";
+      const owner = "eliassouza93"
+      const repo = "gitblog"
 
-      setLoading(true);
-      setError(null);
+      setLoading(true)
+      setError(null)
 
       try {
         const { data } = await axios.get<IssueType>(
           `https://api.github.com/repos/${owner}/${repo}/issues/${id}`
         );
-        setPost(data);
+        setPost(data)
       } catch (erro) {
-        console.log(erro);
+        console.log(erro)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
+    }
 
     if (id) {
-      fetchPostDetails();
+      fetchPostDetails()
     }
   }, [id]);
 
   if (loading) {
-    return <div>Carregando detalhes do post...</div>;
+    return <div>Carregando detalhes do post...</div>
   }
 
   if (error) {
-    return <div>{error}</div>;
+    return <div>{error}</div>
   }
 
   if (!post) {
-    return <div>Post não encontrado.</div>;
+    return <div>Post não encontrado.</div>
   }
 
   return (
@@ -66,7 +66,7 @@ export function PostDetail() {
         <img src={cover} alt="cover" />
         <ContainerOne>
           <ContainerHome style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            <NavigationContainer> {/* Envolve os links */}
+            <NavigationContainer> 
               <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               <span>&lt;</span> VOLTAR
               </Link>
