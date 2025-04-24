@@ -50,7 +50,7 @@ export function PostDetail() {
         <ContainerOne>
           <ContainerHome style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             <NavigationContainer> 
-              <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link to="/">
               <span>&lt;</span> VOLTAR
               </Link>
               <a href={post.user.html_url} target="_blank" rel="noopener noreferrer">
@@ -58,7 +58,7 @@ export function PostDetail() {
               </a>
             </NavigationContainer>
            
-            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+            <div>
               <span>{post.user.login}</span>
               <span>{calculateDays(post.created_at)}</span>
             </div>
