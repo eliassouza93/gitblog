@@ -63,9 +63,14 @@ export const ContainerPost = styled.div`
 
 `
 export const ContainerPostFilho = styled.div`
-     width: 800px;
-
-     justify-content: spa;
+    width: 800px;
+    justify-content: spa;
      
+
+`
+
+export const CarregandoDIv = styled.div`
+  text-align: center;
+  font-size: 14px;
 
 `

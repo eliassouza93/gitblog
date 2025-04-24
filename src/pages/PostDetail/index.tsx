@@ -7,7 +7,7 @@ import axios from 'axios'
 import { calculateDays } from '../../utils/calculateDays'
 import { IssueType } from '../IssueType'
 import styled from 'styled-components'
-import { ContainerHome, ContainerOne,ContainerPost, ContainerPostFilho, HeaderContainer } from './styles'
+import { ContainerHome, ContainerOne,ContainerPost, ContainerPostFilho, HeaderContainer,CarregandoDIv } from './styles'
 
 
 const NavigationContainer = styled.div`
@@ -49,7 +49,7 @@ export function PostDetail() {
   }, [id]);
 
   if (loading) {
-    return <div>Carregando detalhes do post...</div>
+    return <CarregandoDIv>Carregando detalhes do post...</CarregandoDIv>
   }
 
   if (error) {
@@ -74,7 +74,7 @@ export function PostDetail() {
                 VER NO GITHUB
               </a>
             </NavigationContainer>
-            <h3>{post.title}</h3>
+           
             <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
               <span>{post.user.login}</span>
               <span>{calculateDays(post.created_at)}</span>
@@ -85,6 +85,7 @@ export function PostDetail() {
 
       <ContainerPost>
         <ContainerPostFilho>
+        <h3>{post.title}</h3>
           {post.body.split('\n').map((line, index) => (
             <p key={index}>{line}</p>
           ))}
