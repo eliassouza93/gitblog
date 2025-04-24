@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { PostDetail } from './pages/PostDetail';
+import { PostDetail } from './pages/Components/PostDetail';
 
 
 

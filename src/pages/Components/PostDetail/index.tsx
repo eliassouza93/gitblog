@@ -1,11 +1,11 @@
 import  { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
-import cover from '../../assets/Cover.png'
+import cover from '../../../assets/Cover.png'
 import axios from 'axios'
 
-import { calculateDays } from '../../utils/calculateDays'
-import { IssueType } from '../IssueType'
+import { calculateDays } from '../../../utils/calculateDays'
+import { IssueType } from '../../IssueType'
 import styled from 'styled-components'
 import { ContainerHome, ContainerOne,ContainerPost, ContainerPostFilho, HeaderContainer,CarregandoDIv } from './styles'
 
@@ -21,7 +21,7 @@ export function PostDetail() {
   const { id } = useParams<{ id: string }>()
   const [post, setPost] = useState<IssueType | null>(null)
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+
 
   useEffect(() => {
     const fetchPostDetails = async () => {
@@ -29,7 +29,7 @@ export function PostDetail() {
       const repo = "gitblog"
 
       setLoading(true)
-      setError(null)
+
 
       try {
         const { data } = await axios.get<IssueType>(
@@ -50,10 +50,6 @@ export function PostDetail() {
 
   if (loading) {
     return <CarregandoDIv>Carregando detalhes do post...</CarregandoDIv>
-  }
-
-  if (error) {
-    return <div>{error}</div>
   }
 
   if (!post) {
