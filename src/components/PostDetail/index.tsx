@@ -65,7 +65,7 @@ export function PostDetail() {
               </Div2>
             </NavigationContainer>
             <ContainerInfoPerfil>
-              <div style={{ display: 'flex', gap: '1rem' }}>
+              <div>
                 <h3>{post.title}</h3>
               </div>
               <ContainerBotton>

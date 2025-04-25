@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 
 export const ContainerPai = styled.div`
-
 `
-
 export const HeaderContainer = styled.div`
     height: 296px;
     width: 100%;
@@ -24,15 +22,12 @@ export const ContainerDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  
 
 `
 export const ContainerOne = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
- 
-
 
 `
 export const ContainerHome = styled.div`
@@ -52,9 +47,6 @@ export const ContainerPost = styled.div`
   justify-content: center;
   align-items: center;
   color: #E7EDF4;
-  
-
-  
 `
 export const ContainerPostFilho = styled.div`
     width: 864px;
@@ -76,7 +68,6 @@ export const NavigationContainer = styled.div`
     width: 16px;
     height: 14px;
     margin-left: 6px;
-   
   }
 
   span{
@@ -91,14 +82,12 @@ export const NavigationContainer = styled.div`
     font-weight: 800;
     width: 100%;
     color: #3294F8;
-  
-  
+
   }
 `
 export const Div1 = styled.div`
    width: 90%;
-   margin-left: 10px;
-  
+   
 `
 export const Div2 = styled.div`
    width: 20%;
@@ -116,6 +105,7 @@ export const ContainerInfoPerfil = styled.div`
     color: #E7EDF4;
     padding: 0px 15px;
     height: 50px;
+    margin-left: 6px;
   }
 
 `
@@ -123,29 +113,23 @@ export const ContainerBotton = styled.div`
   display: flex;
   justify-content: space-between;
   color: #3294F8;
-
-
   div{
-    width: 50%;
+    width: 55%;
     display: flex;
     justify-content: space-between;
 
+    @media(max-width: 768px){
+      width: 100%;
+    }
   }
   span{
     font-size: 13px;
     padding: 0px 20px;
- 
-   
+    width: 100%;
   }
-
   img{
     width: 16px;
     height: 14px;
-    
- 
-   
   }
-
-
 `
 
