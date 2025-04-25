@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { ContainerFilho, DivContainer, DivImagem, DivInfo, DivLink, Paragrafo, Titulo } from './styles'
 import axios from 'axios'
-import gitIcon from '../../../assets/git.png'
-import intiIcon from '../../../assets/intinuição.png'
-import segIcon from '../../../assets/seguidores.png'
-import linkIcon from '../../../assets/link.png'
+import gitIcon from '../../assets/git.png'
+import intiIcon from '../../assets/intinuição.png'
+import segIcon from '../../assets/seguidores.png'
+import linkIcon from '../../assets/link.png'
 
 
 interface UsuarioGitHub {

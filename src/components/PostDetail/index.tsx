@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import cover from '../../../assets/Cover.png'
-import tempo from '../../../assets/tempo.png'
-import comentario from '../../../assets/coments.png'
-import git from '../../../assets/git.png'
+import cover from '../../assets/Cover.png'
+import tempo from '../../assets/tempo.png'
+import comentario from '../../assets/coments.png'
+import git from '../../assets/git.png'
 import axios from 'axios'
-import { calculateDays } from '../../../utils/calculateDays'
-import { IssueType } from '../../IssueType'
+import { calculateDays } from '../../utils/calculateDays'
+import { IssueType } from '../../pages/IssueType'
 import { ContainerHome, ContainerOne, ContainerPost, ContainerPostFilho, HeaderContainer, CarregandoDIv, NavigationContainer, Div1, Div2, ContainerInfoPerfil, ContainerBotton } from './styles'
-import gitLink from '../../../assets/link.png'
+import gitLink from '../../assets/link.png'
 
 export function PostDetail() {
   const { id } = useParams<{ id: string }>()

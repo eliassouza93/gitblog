@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Header } from "../Components/Header";
-import { Formulario } from "../Components/Formulario";
-import { Cards } from "../Components/Cards";
+ 
 import { Containerhome } from "./styles";
+import { Header } from "../../components/Header";
+import { Formulario } from "../../components/Formulario";
+import { Cards } from "../../components/Cards";
 
 type IssueType = {
   id: number

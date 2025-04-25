@@ -1,6 +1,5 @@
-import { IssueType } from "../../IssueType";
+import { IssueType } from "../../pages/IssueType"
 import { DivContainer, ContainerParagrafo, DivPost, Paragrafo, PostInterno, Titulo, TituloPai } from "./styles"
-
 import { useNavigate } from "react-router-dom"
 
 type CardsProps = {

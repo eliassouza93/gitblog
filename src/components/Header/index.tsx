@@ -1,5 +1,5 @@
 import { HeaderContainer } from "./styles";
-import cover from '../../../assets/Cover.png'
+import cover from '../../assets/Cover.png'
 import { Perfil } from "../Perfil";
 
 
