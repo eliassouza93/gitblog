@@ -1,23 +1,24 @@
 import styled from "styled-components";
 
-export const FormularioContainer = styled.div`
-  margin-top: 200px;
-  width: 864px;
+export const FormularioContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 12rem;
+  
 
   input {
     width: 100%;
-    height: 50px;
-    font-size: 16px;
-    padding: 20px;
-    margin-top: 8px;
-    background: #040F1A;
-    color: #3A536B;
-    border: 1px solid #3A536B;
-    border-radius: 5px;
-  }
-
-  @media (max-width: 900px) {
-    width: 90%;
+    max-width: 864px;
+    padding: 0.75rem 1rem;
+    background-color: #040F1A;
+    border: 1px solid #1C2F41;
+    border-radius: 6px;
+    color: #E7EDF4;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-top:3px;
   }
 `
 
@@ -29,6 +30,7 @@ export const Container = styled.div`
   color: #E7EDF4;
   flex-wrap: wrap;
   gap: 10px;
+  width: 864px;
 `
 
 export const Titulo = styled.h5`

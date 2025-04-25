@@ -87,6 +87,7 @@ export const NavigationContainer = styled.div`
 `
 export const Div1 = styled.div`
    width: 90%;
+   margin-left: 15px;
    
 `
 export const Div2 = styled.div`
